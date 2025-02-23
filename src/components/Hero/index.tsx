@@ -58,12 +58,15 @@ export function Hero() {
             de vida mais saudável e um corpo mais forte e definido.
           </p>
           <div className="flex gap-3 lg:gap-10 mt-6 font-bold text-white">
-            <button className="flex bg-blue-800 items-center justify-center gap-2 lg:px-14 lg:py-6 px-8 py-4 rounded-full">
+            <a
+              href="#plans"
+              className="flex bg-blue-800 items-center justify-center gap-2 lg:px-14 lg:py-6 px-8 py-4 rounded-full"
+            >
               Quro me matricular
               <IoArrowForwardCircleOutline className="text-4xl" />
-            </button>
+            </a>
             <a
-              href="#"
+              href={`https://wa.me/${telefone}?text=Quero me matricularna academia`}
               className="bg-blue-800 items-center justify-center flex rounded-full w-16 h-16 lg:w-24 lg:h-24"
             >
               <IoLogoWhatsapp className="text-4xl" />
@@ -81,24 +84,6 @@ export function Hero() {
           className="relative z-10 h-10 lg:h-16 object-cover"
         />
       </section>
-
-      {/* div cut for desktop */}
-      <svg>
-        <defs>
-          <clipPath id="corte-01-desktop">
-            <path d="M-14 29C-14 -12.9736 20.0264 -47 62 -47H859.903C918.872 -47 955.376 17.2394 925.194 67.8989L699.791 446.231C688.261 465.584 668.739 478.825 646.494 482.38L73.9936 573.871C27.8214 581.25 -14 545.582 -14 498.824V29Z" />
-          </clipPath>
-        </defs>
-      </svg>
-      {/* div cut for mobile */}
-      <svg>
-        <defs>
-          <clipPath id="corte-01-mobile">
-            <path d="M-50 76C-50 34.0264 -15.9736 0 26 0H216.242C275.214 0 311.717 64.2447 281.53 114.904L244.322 177.345C232.791 196.696 213.27 209.934 191.026 213.489L37.9913 237.941C-8.18016 245.318 -50 209.65 -50 162.893V76Z" />
-          </clipPath>
-        </defs>
-      </svg>
-
       <div className="fixed bottom-4 right-4 bg-green-500 w-12 h-12 rounded-full items-center justify-center flex">
         <Drawer>
           <DrawerTrigger>
@@ -128,6 +113,23 @@ export function Hero() {
           </DrawerContent>
         </Drawer>
       </div>
+
+      {/* div cut for desktop */}
+      <svg>
+        <defs>
+          <clipPath id="corte-01-desktop">
+            <path d="M-14 29C-14 -12.9736 20.0264 -47 62 -47H859.903C918.872 -47 955.376 17.2394 925.194 67.8989L699.791 446.231C688.261 465.584 668.739 478.825 646.494 482.38L73.9936 573.871C27.8214 581.25 -14 545.582 -14 498.824V29Z" />
+          </clipPath>
+        </defs>
+      </svg>
+      {/* div cut for mobile */}
+      <svg>
+        <defs>
+          <clipPath id="corte-01-mobile">
+            <path d="M-50 76C-50 34.0264 -15.9736 0 26 0H216.242C275.214 0 311.717 64.2447 281.53 114.904L244.322 177.345C232.791 196.696 213.27 209.934 191.026 213.489L37.9913 237.941C-8.18016 245.318 -50 209.65 -50 162.893V76Z" />
+          </clipPath>
+        </defs>
+      </svg>
     </div>
   );
 }
