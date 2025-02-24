@@ -12,58 +12,58 @@ import logo from "../../Assets/Logo.svg";
 
 export function NavBar() {
   return (
-    <nav className="flex p-10 absolute top-0 left-0 w-screen z-10 bg-transparent items-center">
-      <Image src={logo} alt="Logo do siste" className="hidden lg:block w-16" />
-      <ul className="hidden lg:flex justify-between items-center w-[740px] bg-white rounded-full p-4 lg:ml-[250] font-bold">
+    <nav className="absolute left-0 top-0 z-10 flex w-screen items-center bg-transparent p-10">
+      <Image src={logo} alt="Logo do siste" className="hidden w-16 lg:block" />
+      <ul className="hidden w-[740px] items-center justify-between rounded-full bg-white p-4 font-bold lg:ml-[250] lg:flex">
         <li>
-          <a href="#" className="bg-blue-800 py-3 px-6 rounded-full text-white">
+          <a href="#" className="rounded-full bg-blue-800 px-6 py-3 text-white">
             Home
           </a>
         </li>
         <li>
-          <a href="#" className="py-3 px-6 rounded-full">
+          <a href="#plans" className="rounded-full px-6 py-3">
             Planos
           </a>
         </li>
         <li>
-          <a href="#" className="py-3 px-6 rounded-full">
+          <a href="#location" className="rounded-full px-6 py-3">
             Endereço
           </a>
         </li>
         <li>
-          <a href="#" className="py-3 px-6 rounded-full">
+          <a href="#" className="rounded-full px-6 py-3">
             Beneficios
           </a>
         </li>
       </ul>
-      <div className="bg-blue-800 fixed top-8 right-10 w-11 h-11 lg:w-20 lg:h-20 flex items-center justify-center rounded-full hover:bg-blue-700 transition-all text-white shadow-lg shadow-blue-800 inset-shadow-sm inset-shadow-indigo-500">
+      <div className="inset-shadow-sm inset-shadow-indigo-500 fixed right-10 top-8 flex h-11 w-11 items-center justify-center rounded-full bg-blue-800 text-white shadow-lg shadow-blue-800 transition-all hover:bg-blue-700 lg:h-20 lg:w-20">
         <Sheet>
           <SheetTrigger>
-            <RiMenuAddFill className="w-6 h-6 lg:w-8 lg:h-8" />
+            <RiMenuAddFill className="h-6 w-6 lg:h-8 lg:w-8" />
           </SheetTrigger>
           <SheetContent>
             <SheetHeader>
-              <SheetTitle className="bg-blue-800 rounded-xl mt-2">
+              <SheetTitle className="mt-2 rounded-xl bg-blue-800">
                 Menu de navegação
               </SheetTitle>
-              <SheetDescription className="border-gray-400 border rounded-2xl p-2 bg-gradientDivCut text-black">
+              <SheetDescription className="rounded-2xl border border-gray-400 bg-gradientDivCut p-2 text-black">
                 <ul className="flex flex-col items-center justify-center gap-1">
-                  <li className="p-1 bg-blue-800 w-28 rounded-lg text-white border border-white">
+                  <li className="w-28 rounded-lg border border-white bg-blue-800 p-1 text-white">
                     <a href="#" className="">
                       Home
                     </a>
                   </li>
-                  <li className="p-1 bg-blue-800 w-28 rounded-lg text-white border border-white">
+                  <li className="w-28 rounded-lg border border-white bg-blue-800 p-1 text-white">
                     <a href="#plans" className="">
                       Planos
                     </a>
                   </li>
-                  <li className="p-1 bg-blue-800 w-28 rounded-lg text-white border border-white">
-                    <a href="#" className="">
+                  <li className="w-28 rounded-lg border border-white bg-blue-800 p-1 text-white">
+                    <a href="#location" className="">
                       Endereço
                     </a>
                   </li>
-                  <li className="p-1 bg-blue-800 w-28 rounded-lg text-white border border-white">
+                  <li className="w-28 rounded-lg border border-white bg-blue-800 p-1 text-white">
                     <a href="#" className="">
                       Beneficios
                     </a>
@@ -72,12 +72,12 @@ export function NavBar() {
               </SheetDescription>
               <SheetDescription className="text-black">
                 <ul className="flex flex-col items-center justify-center gap-1">
-                  <li className="border px-2 py-1 border-blue-800 rounded-sm w-full flex items-center justify-center">
+                  <li className="flex w-full items-center justify-center rounded-sm border border-blue-800 px-2 py-1">
                     <a href="https://wa.me/5583991651441?text=Quero me matricularna academia">
                       Area do aluno
                     </a>
                   </li>
-                  <li className="border px-2 py-1 border-blue-800 rounded-sm w-full flex items-center justify-center">
+                  <li className="flex w-full items-center justify-center rounded-sm border border-blue-800 px-2 py-1">
                     <a href="https://wa.me/5583991651441?text=Quero me matricularna academia">
                       Matricula pelo WhatsApp
                     </a>
