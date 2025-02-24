@@ -29,21 +29,21 @@ export function Hero() {
   const linkWhatsApp = `https://wa.me/${telefone}?text=${mensagem}`;
 
   return (
-    <div className="w-full h-[1056px] absolute block overflow-hidden">
+    <div className="absolute block h-[1056px] w-full overflow-hidden">
       <section>
         <NavBar />
-        <DivCut className="absolute bg-gradientDivCut z-0" />
-        <div className="p-3 mt-20 lg:mt-36 relative z-10 mx-auto container">
+        <DivCut className="absolute z-0 bg-gradientDivCut" />
+        <div className="container relative z-10 mx-auto mt-20 p-3 lg:mt-36">
           <div className="flex items-center">
             <h1>
               <Image src={logo} alt="Academia do codigo" />
             </h1>
-            <h2 className="text-center text-blue-800 font-bold">
+            <h2 className="text-center font-bold text-blue-800">
               Venha ter um melhor <br /> desempenho em sua vida
             </h2>
           </div>
           <div className="">
-            <h3 className="text-blue-800 mt-3 text-xl lg:text-3xl">
+            <h3 className="mt-3 text-xl text-blue-800 lg:text-3xl">
               <span className="font-bold">
                 Academia de <br />
                 qualidade
@@ -52,22 +52,22 @@ export function Hero() {
               <br /> só <span className="font-bold">aqui!</span>
             </h3>
           </div>
-          <p className="w-[650px] mt-3 lg:text-xl">
+          <p className="mt-3 w-[650px] lg:text-xl">
             Não se sente confortável com seu corpo? Nós podemos te ajudar! A
             melhor maneira de recuperar sua autoconfiança é através de um estilo
             de vida mais saudável e um corpo mais forte e definido.
           </p>
-          <div className="flex gap-3 lg:gap-10 mt-6 font-bold text-white">
+          <div className="mt-6 flex gap-3 font-bold text-white lg:gap-10">
             <a
               href="#plans"
-              className="flex bg-blue-800 items-center justify-center gap-2 lg:px-14 lg:py-6 px-8 py-4 rounded-full"
+              className="flex items-center justify-center gap-2 rounded-full bg-blue-800 px-8 py-4 lg:px-14 lg:py-6"
             >
               Quro me matricular
               <IoArrowForwardCircleOutline className="text-4xl" />
             </a>
             <a
               href={`https://wa.me/${telefone}?text=Quero me matricularna academia`}
-              className="bg-blue-800 items-center justify-center flex rounded-full w-16 h-16 lg:w-24 lg:h-24"
+              className="flex h-16 w-16 items-center justify-center rounded-full bg-blue-800 lg:h-24 lg:w-24"
             >
               <IoLogoWhatsapp className="text-4xl" />
             </a>
@@ -76,18 +76,18 @@ export function Hero() {
         <Image
           src={menhero}
           alt="homem fazendo exercicio"
-          className="absolute top-0 lg:top-[-80px] right-0 opacity-60 lg:opacity-80 w-[650px]"
+          className="absolute right-0 top-10 w-[650px] opacity-60 lg:top-0 lg:opacity-80"
         />
         <Image
           src={transitionbar}
           alt="Barra de transição do hero"
-          className="relative z-10 h-10 lg:h-16 object-cover"
+          className="relative z-10 h-10 object-cover lg:h-16"
         />
       </section>
-      <div className="fixed bottom-4 right-4 bg-green-500 w-12 h-12 rounded-full items-center justify-center flex">
+      <div className="fixed bottom-4 right-4 z-10 flex h-12 w-12 items-center justify-center rounded-full bg-green-500">
         <Drawer>
           <DrawerTrigger>
-            <IoLogoWhatsapp className="text-white h-8 w-8" />
+            <IoLogoWhatsapp className="h-8 w-8 text-white" />
           </DrawerTrigger>
           <DrawerContent>
             <DrawerHeader>
@@ -105,7 +105,7 @@ export function Hero() {
                 <a href={linkWhatsApp}>mandar mensagem</a>
               </Button>
               <DrawerClose>
-                <Button className="bg-red-700 hover:bg-red-800 text-white">
+                <Button className="bg-red-700 text-white hover:bg-red-800">
                   Cancel
                 </Button>
               </DrawerClose>
