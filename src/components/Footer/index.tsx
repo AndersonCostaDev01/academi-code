@@ -8,7 +8,7 @@ import {
 } from "react-icons/fa";
 
 import footerDivision from "@/Assets/transitionbar.png";
-import logo from "@/Assets/transitionbar.png";
+import logo from "@/Assets/Logo.svg";
 
 function Footer() {
   return (
