@@ -1,3 +1,4 @@
+import Benefits from "@/components/Benefits";
 import { Hero } from "@/components/Hero";
 import Location from "@/components/Location";
 import { Plans } from "@/components/Plans";
@@ -9,6 +10,7 @@ export default function Home() {
       <div className="mt-[530px] lg:mt-[700px]">
         <Plans />
         <Location />
+        <Benefits />
       </div>
     </div>
   );

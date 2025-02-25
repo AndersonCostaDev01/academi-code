@@ -5,7 +5,7 @@ export function Plans() {
   return (
     <section id="plans" className="bg-gray-100 p-2 py-12">
       <div className="container mx-auto">
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center text-center">
           <h2 className="mb-2 text-3xl font-bold">Veja todos nossos planos</h2>
           <p className="">
             Qual se enquadra melhor em suas necessidades?
@@ -15,7 +15,7 @@ export function Plans() {
         <div className="mt-16 flex w-screen flex-col gap-6 lg:w-full lg:flex-row lg:justify-between">
           <PlansCard
             plansTitle="Plano mensal"
-            plansDescription="Plano com pagamento mensal e sem fidelidade"
+            plansDescription="Plano com pagamento mensal e sem fidelidade de tempo"
             value="60,00"
             plansAdvantages={[
               "Sem fidelidade",

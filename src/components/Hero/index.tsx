@@ -81,7 +81,7 @@ export function Hero() {
         <Image
           src={transitionbar}
           alt="Barra de transição do hero"
-          className="relative z-10 h-10 object-cover lg:h-16"
+          className="relative z-10 h-10 object-cover lg:bottom-[-5px] lg:h-16"
         />
       </section>
       <div className="fixed bottom-4 right-4 z-10 flex h-12 w-12 items-center justify-center rounded-full bg-green-500">
