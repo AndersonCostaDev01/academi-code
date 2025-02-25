@@ -7,7 +7,7 @@ import {
   FaWhatsapp,
 } from "react-icons/fa";
 
-import footerDivision from "../../assets/transitionbar.png";
+import footerDivision from "@/Assets/transitionbar.png";
 import logo from "@/Assets/transitionbar.png";
 
 function Footer() {
