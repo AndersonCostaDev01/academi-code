@@ -1,4 +1,5 @@
 import Benefits from "@/components/Benefits";
+import Footer from "@/components/Footer";
 import { Hero } from "@/components/Hero";
 import Location from "@/components/Location";
 import { Plans } from "@/components/Plans";
@@ -11,6 +12,7 @@ export default function Home() {
         <Plans />
         <Location />
         <Benefits />
+        <Footer />
       </div>
     </div>
   );

@@ -31,7 +31,7 @@ export function NavBar() {
           </a>
         </li>
         <li>
-          <a href="#" className="rounded-full px-6 py-3">
+          <a href="#benefits" className="rounded-full px-6 py-3">
             Beneficios
           </a>
         </li>
@@ -47,7 +47,7 @@ export function NavBar() {
                 Menu de navegação
               </SheetTitle>
               <SheetDescription className="rounded-2xl border border-gray-400 bg-gradientDivCut p-2 text-black">
-                <ul className="flex flex-col items-center justify-center gap-1">
+                <ul className="flex flex-col items-center justify-center gap-1 text-center">
                   <li className="w-28 rounded-lg border border-white bg-blue-800 p-1 text-white">
                     <a href="#" className="">
                       Home
@@ -64,7 +64,7 @@ export function NavBar() {
                     </a>
                   </li>
                   <li className="w-28 rounded-lg border border-white bg-blue-800 p-1 text-white">
-                    <a href="#" className="">
+                    <a href="#benefits" className="">
                       Beneficios
                     </a>
                   </li>
