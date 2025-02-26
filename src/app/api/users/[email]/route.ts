@@ -1,21 +1,20 @@
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import { PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient();
 
 export async function GET(
-  req: Request,
-  { params }: { params: { email: string } },
+  req: NextRequest,
+  context: { params: { email: string } },
 ) {
   try {
-    const { email } = params;
+    const { email } = context.params; // 🔥 Agora o Next.js reconhece params corretamente
 
     const user = await prisma.user.findUnique({
       where: { email },
       select: {
         id: true,
         name: true,
-        password: true,
         email: true,
         isActive: true,
         isAdmin: true,
@@ -33,6 +32,7 @@ export async function GET(
 
     return NextResponse.json(user, { status: 200 });
   } catch (error) {
+    console.error("Erro ao buscar usuário:", error); // 🔥 Adicionamos log para debug
     return NextResponse.json(
       { error: "Erro ao buscar usuário" },
       { status: 500 },
