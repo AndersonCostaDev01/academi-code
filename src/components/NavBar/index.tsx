@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { RiMenuAddFill } from "react-icons/ri";
 import {
   Sheet,
@@ -73,9 +74,7 @@ export function NavBar() {
               <SheetDescription className="text-black">
                 <ul className="flex flex-col items-center justify-center gap-1">
                   <li className="flex w-full items-center justify-center rounded-sm border border-blue-800 px-2 py-1">
-                    <a href="https://wa.me/5583991651441?text=Quero me matricularna academia">
-                      Area do aluno
-                    </a>
+                    <Link href="/students">Area do aluno</Link>
                   </li>
                   <li className="flex w-full items-center justify-center rounded-sm border border-blue-800 px-2 py-1">
                     <a href="https://wa.me/5583991651441?text=Quero me matricularna academia">
