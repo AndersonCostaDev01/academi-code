@@ -3,12 +3,18 @@ import { PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient();
 
-export async function GET(
-  req: NextRequest,
-  context: { params: { email: string } },
-) {
+export async function GET(req: NextRequest) {
   try {
-    const { email } = context.params; // 🔥 Agora o Next.js reconhece params corretamente
+    // 🔥 Pegando `email` da URL manualmente
+    const urlParts = req.nextUrl.pathname.split("/");
+    const email = urlParts[urlParts.length - 1]; // O último segmento é o email
+
+    if (!email) {
+      return NextResponse.json(
+        { error: "Email não fornecido" },
+        { status: 400 },
+      );
+    }
 
     const user = await prisma.user.findUnique({
       where: { email },
@@ -32,9 +38,9 @@ export async function GET(
 
     return NextResponse.json(user, { status: 200 });
   } catch (error) {
-    console.error("Erro ao buscar usuário:", error); // 🔥 Adicionamos log para debug
+    console.error("❌ Erro ao buscar usuário:", error);
     return NextResponse.json(
-      { error: "Erro ao buscar usuário" },
+      { error: "Erro interno no servidor" },
       { status: 500 },
     );
   }
