@@ -1,24 +1,19 @@
-import { dirname } from "path";
-import SimpleImportSort from "eslint-plugin-simple-import-sort";
-import { fileURLToPath } from "url";
 import { FlatCompat } from "@eslint/eslintrc";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+import simpleImportSort from "eslint-plugin-simple-import-sort"; // 🔥 Importação correta do plugin
 
 const compat = new FlatCompat({
-  baseDirectory: __dirname,
+  baseDirectory: import.meta.url,
 });
 
-const eslintConfig = [
+export default [
   ...compat.extends("next/core-web-vitals", "next/typescript"),
   {
-    plugins: ["simple-import-sort"],
+    plugins: {
+      "simple-import-sort": simpleImportSort, // 🔥 Forma correta de definir plugins
+    },
     rules: {
       "simple-import-sort/imports": "error",
       "simple-import-sort/exports": "error",
     },
   },
 ];
-
-export default eslintConfig;
