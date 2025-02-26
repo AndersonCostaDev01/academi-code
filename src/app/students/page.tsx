@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 export default function StudentsPage() {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const [user, setUser] = useState<any>(null);
   const [error, setError] = useState("");
   const router = useRouter();
@@ -26,6 +27,7 @@ export default function StudentsPage() {
         if (!res.ok) throw new Error(data.error || "Erro ao buscar usuário");
 
         setUser(data.user);
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
       } catch (err: any) {
         setError(err.message);
         localStorage.removeItem("token");
