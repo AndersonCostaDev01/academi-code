@@ -1,14 +1,14 @@
 import Image from "next/image";
 import {
   FaFacebook,
-  FaYoutube,
   FaInstagram,
   FaTwitter,
   FaWhatsapp,
+  FaYoutube,
 } from "react-icons/fa";
 
-import footerDivision from "@/Assets/transitionbar.png";
 import logo from "@/Assets/Logo.svg";
+import footerDivision from "@/Assets/transitionbar.png";
 
 function Footer() {
   return (

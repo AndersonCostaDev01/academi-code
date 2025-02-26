@@ -1,6 +1,7 @@
-import { Button } from "@/components/ui/button";
 import { BsPatchCheckFill } from "react-icons/bs";
+
 import * as S from "@/components/Plans/Components/PlansCard.styles";
+import { Button } from "@/components/ui/button";
 
 type PlansCardProps = {
   recommended?: boolean;

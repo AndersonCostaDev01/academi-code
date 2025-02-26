@@ -1,13 +1,13 @@
 "use client";
 
 import Image from "next/image";
+import { useState } from "react";
 import { IoArrowForwardCircleOutline, IoLogoWhatsapp } from "react-icons/io5";
-import { NavBar } from "../NavBar";
-import { DivCut } from "@/components/Hero/styles";
+
 import menhero from "@/Assets/hero-men.png";
 import logo from "@/Assets/Logo.svg";
 import transitionbar from "@/Assets/transitionbar.png";
-
+import { DivCut } from "@/components/Hero/styles";
 import { Button } from "@/components/ui/button";
 import {
   Drawer,
@@ -20,7 +20,8 @@ import {
   DrawerTrigger,
 } from "@/components/ui/drawer";
 import { Textarea } from "@/components/ui/textarea";
-import { useState } from "react";
+
+import { NavBar } from "../NavBar";
 
 export function Hero() {
   const [mensage, setMensage] = useState("Olá, gostaria de mais informações!");

@@ -1,6 +1,13 @@
-import * as React from "react";
 import { StaticImageData } from "next/image";
+import * as React from "react";
 
+import benefits01 from "@/Assets/Benefits-01.svg";
+import benefits02 from "@/Assets/Benefits-02.svg";
+import benefits03 from "@/Assets/Benefits-03.svg";
+import benefits04 from "@/Assets/Benefits-04.svg";
+import benefits05 from "@/Assets/Benefits-05.svg";
+import benefits06 from "@/Assets/Benefits-06.svg";
+import test from "@/Assets/hero-men.png";
 import {
   Carousel,
   CarouselContent,
@@ -8,14 +15,8 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+
 import Card from "./Card";
-import test from "@/Assets/hero-men.png";
-import benefits01 from "@/Assets/Benefits-01.svg";
-import benefits02 from "@/Assets/Benefits-02.svg";
-import benefits03 from "@/Assets/Benefits-03.svg";
-import benefits04 from "@/Assets/Benefits-04.svg";
-import benefits05 from "@/Assets/Benefits-05.svg";
-import benefits06 from "@/Assets/Benefits-06.svg";
 
 interface CarouselBenefitsProps {
   src: string | StaticImageData;

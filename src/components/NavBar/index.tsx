@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { RiMenuAddFill } from "react-icons/ri";
+
 import {
   Sheet,
   SheetContent,
@@ -9,6 +10,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+
 import logo from "../../Assets/Logo.svg";
 
 export function NavBar() {

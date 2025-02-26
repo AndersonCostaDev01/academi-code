@@ -1,5 +1,5 @@
-import { NextResponse } from "next/server";
 import jwt from "jsonwebtoken";
+import { NextResponse } from "next/server";
 
 const SECRET_KEY = process.env.JWT_SECRET || "chave-secreta";
 
