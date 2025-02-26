@@ -6,7 +6,8 @@ import { useEffect, useState } from "react";
 
 export default function AdminPage() {
   const [users, setUsers] = useState<User[]>();
-  const [admin, setAdmin] = useState<any>(null);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const [admin, setAdmin] = useState<any>();
   const router = useRouter();
 
   useEffect(() => {

@@ -22,6 +22,7 @@ export async function GET(req: Request) {
       },
       { status: 200 },
     );
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
   } catch (error) {
     return NextResponse.json(
       { error: "Token inválido ou expirado!" },

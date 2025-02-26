@@ -27,6 +27,7 @@ export default function LoginPage() {
       localStorage.setItem("token", data.token); // 🔥 SALVA O TOKEN NO LOCALSTORAGE
 
       router.push("/students"); // 🔥 REDIRECIONA PARA ÁREA PROTEGIDA
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (err: any) {
       setError(err.message);
     }
