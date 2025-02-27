@@ -3,7 +3,7 @@
 import { User } from "@prisma/client";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-
+/* */
 export default function AdminPage() {
   const [users, setUsers] = useState<User[]>();
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
